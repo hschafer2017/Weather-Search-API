@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="text/javascript" src="index.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <style type="text/css">
-        #data{
+        #city-name {
             font-size: 30px;
             text-align: center;
         }
-        body{
-            background-color: #999;
+
+        #data {
+            font-size: 20px;
+        }
+
+        body {
+            background-color: #ADD8E6;
+            color: #696969;
+        }
+
+        footer {
+            margin: 0;
         }
     </style>
 </head>
+
 <body>
+    <div id="city-name">
+        <form action ="index.js">
+            <input type="text" name="City" class="form-control" id="city" placeholder="City" required/>
+            <button type="submit" onClick= newCity() class="btn btn-secondary center-block">Search</button>
+        </form>
+    </div>
     <div id="data"></div>
-    <div id="weight"></div>
-    <div id="height"></div>
-    <div id="gender"></div>
-    <div id="loops"></div>
+    <!--<div id="height"></div>-->
+    <!--<div id="gender"></div>-->
+    <!--<div id="loops"></div>-->
+    <footer>
+        <div class="fonts">
+            <h6>Brought to you by the Weather People. Copyright 2018.</h6>
+        </div>
+    </footer>
 </body>
+
 </html>
