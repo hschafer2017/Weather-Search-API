@@ -8,6 +8,7 @@
     <script type="text/javascript" src="index.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
     <style type="text/css">
         #city-name {
             font-size: 30px;
@@ -22,6 +23,10 @@
             background-color: #ADD8E6;
             color: #696969;
         }
+        
+        .reset{
+            display: none;
+        }
 
         footer {
             margin: 0;
@@ -30,19 +35,19 @@
 </head>
 
 <body>
+    <h1>World Wide Weather</h1>
     <div id="city-name">
-        <form action ="index.js">
-            <input type="text" name="City" class="form-control" id="city" placeholder="City" required/>
-            <button type="submit" onClick= newCity() class="btn btn-secondary center-block">Search</button>
+        <form id = "city" onSubmit = "newCity(); return false;">
+            <input type="text" name="city" id = "city" placeholder="City" required/>
+            
         </form>
+        <button type="submit" onClick= "newCity()" class="btn btn-secondary center-block">Search</button>
     </div>
     <div id="data"></div>
-    <!--<div id="height"></div>-->
-    <!--<div id="gender"></div>-->
-    <!--<div id="loops"></div>-->
+    <a href = "index.html" class ="reset"><strong>Different City</strong></a>
     <footer>
         <div class="fonts">
-            <h6>Brought to you by the Weather People. Copyright 2018.</h6>
+            <h6>Brought to you by The Weather People. Copyright 2018.</h6>
         </div>
     </footer>
 </body>
