@@ -8,49 +8,31 @@
     <script type="text/javascript" src="index.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
-    <style type="text/css">
-        #city-name {
-            font-size: 30px;
-            text-align: center;
-        }
-
-        #data {
-            font-size: 20px;
-        }
-
-        body {
-            background-color: #ADD8E6;
-            color: #696969;
-            font-family: sans-serif;
-        }
-        
-        .reset{
-            display: none;
-        }
-
-        footer {
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
 <body>
-    <h1>World Wide Weather</h1>
-    <div id="city-name">
-        <form id = "city" onSubmit = "newCity(); return false;">
-            <input type="text" name="city" id = "city" placeholder="City" required/>
-            
-        </form>
-        <button type="submit" onClick= "newCity()" class="btn btn-secondary center-block">Search</button>
-    </div>
-    <div id="data"></div>
-    <a href = "index.html" class ="reset"><strong>Different City</strong></a>
-    <footer>
-        <div class="fonts">
-            <h6>Hope your skies are sunny!</h6>
+    <div class="container">
+        <h1>World Wide Weather</h1>
+        <div class="row" id="city-name">
+            <form id="city" onSubmit="newCity(); return false;">
+                <input type="text" name="city" id="city" placeholder="City" required/>
+
+            </form>
+            <button type="submit" onClick="newCity()" class="btn btn-secondary center-block">Search</button>
         </div>
-    </footer>
+        <div id="data"></div>
+        <a href="index.html" class="reset"><strong>Try A Different City</strong></a>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

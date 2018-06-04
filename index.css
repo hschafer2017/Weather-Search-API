@@ -1,0 +1,33 @@
+body {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    padding-top: 30px;
+}
+
+button {
+    margin-top: 15px;
+}
+
+#city-name {
+    font-size: 25px;
+    padding-top: 70px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#data {
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.reset {
+    display: none;
+}

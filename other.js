@@ -34,4 +34,4 @@ function displayNicely3(apiData) {
 //             break;
 //         }
 //     }
-// }   
+// }
