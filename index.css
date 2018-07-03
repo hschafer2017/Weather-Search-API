@@ -1,5 +1,12 @@
-body {
-    background-image: url(background.jpg);
+body,
+html {
+    height: 100%;
+}
+
+.background {
+    background-image: url('background.jpg');
+    height: 100%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: #333;
