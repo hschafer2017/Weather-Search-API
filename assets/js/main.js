@@ -2,19 +2,17 @@ let request = new XMLHttpRequest();
 
 function displayNicely1(apiData) {
     let dataFrom = JSON.parse(apiData);
-    document.getElementById('city-name').innerHTML =
-        "<strong>" + dataFrom.name + ", " + dataFrom.sys.country;
+    document.getElementById('city-name').innerHTML = 
+        `<strong> ${dataFrom.name}, ${dataFrom.sys.country}`;
 }
 
 function displayNicely(apiData) {
     let newData = JSON.parse(apiData);
-    let string1 = "<div><strong>Current Weather: </strong>" + newData.weather[0].main + "</div>"
-    string1 += "<div><strong>Temperature: </strong>" + (newData.main.temp - 273.15).toFixed(1) + "°C" + " / " + (newData.main.temp * (9 / 5) - 459.27).toFixed(1) + "°F </div>"
-    string1 += "<div><strong>Humidity: </strong>" + newData.main.humidity + "% </div>"
-    string1 += "<div><strong>Wind: </strong>" + newData.wind.speed + "kph </div>"
-
     document.getElementById("data").innerHTML =
-        string1;
+    `<div><strong>Current Weather: </strong>${newData.weather[0].main}</div>
+     <div><strong>Temperature: </strong>${(newData.main.temp - 273.15).toFixed(1)}°C / ${(newData.main.temp * (9 / 5) - 459.27).toFixed(1)}°F</div>
+     <div><strong>Humidity: </strong>${newData.main.humidity}%</div>
+     <div><strong>Wind: </strong>${newData.wind.speed}kph</div>`;
 }
 
 
@@ -31,9 +29,9 @@ request.onreadystatechange = function() {
     }
 }
 
-function newCity() {
-    let city = document.getElementById("city")["city"].value;
-    request.open("GET", "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=559f61dad1082432529d0785da372bcc")
+function findWeather() {
+    let city = document.getElementById("city").value;
+    request.open("GET", `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=559f61dad1082432529d0785da372bcc`)
     request.send();
     return false;
 }
