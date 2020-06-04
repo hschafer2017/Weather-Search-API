@@ -1,5 +1,4 @@
 let request = new XMLHttpRequest();
-// XML is part of a markup language 
 
 function displayNicely1(apiData) {
     let dataFrom = JSON.parse(apiData);
@@ -9,7 +8,6 @@ function displayNicely1(apiData) {
 
 function displayNicely(apiData) {
     let newData = JSON.parse(apiData);
-    console.log(newData);
     let string1 = "<div><strong>Current Weather: </strong>" + newData.weather[0].main + "</div>"
     string1 += "<div><strong>Temperature: </strong>" + (newData.main.temp - 273.15).toFixed(1) + "°C" + " / " + (newData.main.temp * (9 / 5) - 459.27).toFixed(1) + "°F </div>"
     string1 += "<div><strong>Humidity: </strong>" + newData.main.humidity + "% </div>"
